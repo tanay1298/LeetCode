@@ -60,33 +60,57 @@ class Main {
 class Solution
 {
     
-    static void dfs(int src,  ArrayList<ArrayList<Integer>> graph, boolean visited[], ArrayList<Integer> al)
+    // 0 - not visited
+    // 1 - current path
+    // 2 - visited the whole path
+    
+    
+    static boolean dfs(int src,  ArrayList<ArrayList<Integer>> graph, int visited[], ArrayList<Integer> al)
     {
-        visited[src] = true;
+        visited[src] = 1;
         
         for(int nbr : graph.get(src))
         {
-            if(!visited[nbr])
-                dfs(nbr, graph, visited, al);
+            if(visited[nbr]==0)
+            {
+                boolean ans =  dfs(nbr, graph, visited, al);
+                
+                if(ans) //true
+                    return true;
+            }
+            else if(visited[nbr]==1)
+                return true;
+               
         }
         
         // while returning ~ once all nodes have been added and there is no further path,
         // then add in al
         
+        visited[src] = 2;
         al.add(src);
+        
+        return false;
     }
     
     //Function to return list containing vertices in Topological order. 
     static int[] topoSort(int V, ArrayList<ArrayList<Integer>> adj) 
     {
         
-        boolean visited[] = new boolean [V];
+        int visited[] = new int [V];
         ArrayList<Integer> al = new ArrayList<>();
         
         for(int i=0;i<V;i++)
         {
-            if(!visited[i])
-                dfs(i, adj, visited, al);
+            if(visited[i] == 0)
+            {
+                boolean cycle = dfs(i, adj, visited, al);
+                
+                if(cycle)
+                {
+                    System.out.println("No Solution ");
+                    return new int[]{};
+                }
+            }
         }
         
         int topo[] = new int[V];
