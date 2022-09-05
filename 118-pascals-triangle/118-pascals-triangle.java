@@ -11,15 +11,7 @@ class Solution {
         if(n==1)
             return res;
         
-        List<Integer> r2 = new ArrayList<>();
-        r2.add(1);
-        r2.add(1);
-        res.add(r2);
-        
-        if(n==2)
-            return res;
-        
-        for(int k=2;k<n;k++)
+        for(int k=1;k<n;k++)
         {
             List<Integer> l = new ArrayList<>();
             l.add(1);
