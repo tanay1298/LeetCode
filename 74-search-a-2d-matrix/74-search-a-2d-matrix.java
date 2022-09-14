@@ -2,9 +2,6 @@ class Solution {
     
     public boolean search(int[][]matrix, int i, int j, int target, int m, int n)
     {
-        System.out.println("in helper");
-        System.out.print("i is " + i);
-        System.out.print(" j is " + j);
         boolean res1 = false;
         boolean res2 = false;
         
