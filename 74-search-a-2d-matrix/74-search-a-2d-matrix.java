@@ -17,27 +17,19 @@ class Solution {
             
             if(target < x && j-1 >= 0)
             {
-                // if(target <= matrix[i][j-1])
-                // {
-                    System.out.print("less");
-                    res1 = search(matrix, i, j-1, target, m, n);
-                    if(res1 == true)
-                        return true;
-                // }
-                
+                System.out.print("less");
+                res1 = search(matrix, i, j-1, target, m, n);
+                if(res1 == true)
+                    return true;                
             }
             
         
             if(target > x && i+1 < m)
             {
-                // if(target >= matrix[i+1][j])
-                // {
-                    System.out.print("more");
-                    res2 = search(matrix, i+1, j, target, m , n);
-                    if(res2 == true)
-                        return true;
-                // }
-                
+                System.out.print("more");
+                res2 = search(matrix, i+1, j, target, m , n);
+                if(res2 == true)
+                    return true;
             }
         }
         
