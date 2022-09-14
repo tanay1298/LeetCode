@@ -1,5 +1,21 @@
 class Solution {
     
+    // recursion
+    public int fn(int i, int j, int m, int n, int dp[][])
+    {
+        if(i>=m || j>=n)
+            return 0;
+        
+        if(i==m-1 && j==n-1)
+            return 1;
+        
+        // already calculated
+        if(dp[i][j] != -1)
+            return dp[i][j];
+        
+        return dp[i][j] = fn(i+1, j, m , n, dp) + fn(i, j+1, m, n, dp);
+    }
+    
     public int uniquePaths(int m, int n) 
     {
         int dp[][] = new int[m][n];
@@ -7,19 +23,8 @@ class Solution {
         for(int i=0;i<m;i++)
         {
             for(int j=0;j<n;j++)
-            {
-                // Starting from cell [m - 1][n - 1] has 2 options: up and left.
-                // If you arrive at m == 0 that means that the only way you can go is left
-                // that means that you have only 1 option to get there Similar for n == 0.
-                if(i==0 || j==0)
-                    dp[i][j] = 1;
-                
-                // either go left or up
-                else
-                    dp[i][j] = dp[i][j-1] + dp[i-1][j];
-            }
+                dp[i][j] = -1;
         }
-        
-        return dp[m-1][n-1];
+        return fn(0, 0 , m , n, dp);
     }
 }
