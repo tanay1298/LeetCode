@@ -14,7 +14,6 @@ class Solution {
             
             if(target < x && j-1 >= 0)
             {
-                System.out.print("less");
                 res1 = search(matrix, i, j-1, target, m, n);
                 if(res1 == true)
                     return true;                
@@ -23,7 +22,6 @@ class Solution {
         
             if(target > x && i+1 < m)
             {
-                System.out.print("more");
                 res2 = search(matrix, i+1, j, target, m , n);
                 if(res2 == true)
                     return true;
