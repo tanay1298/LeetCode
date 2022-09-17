@@ -8,11 +8,6 @@ class Solution
         
         for(int i=0;i<nums.length;i++)
         {
-            m.put(nums[i],i);
-        }
-        
-        for(int i=0;i<nums.length;i++)
-        {
             Integer pos = m.get(target-nums[i]);
             if(pos != null && pos!=i)
             {
@@ -20,6 +15,8 @@ class Solution
                 idx2 = pos;
                 break;
             }
+            else
+                m.put(nums[i], i);
         }
         
         int res[] = new int[2];
