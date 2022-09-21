@@ -38,10 +38,6 @@ class Solution
         ListNode p = null;
         int c=0;
         
-        System.out.println(len);
-        System.out.println(k);
-
-        
         while(t!=null && c!=k-1)
         {
             c++;
