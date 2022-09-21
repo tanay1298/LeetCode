@@ -19,7 +19,7 @@ class Solution {
             n = n.next;
         }
         
-        p.val = n.val;;
+        p.val = n.val;
         p.next = null;
     }
 }
