@@ -44,7 +44,6 @@ class Solution
         
         while(t!=null && c!=k-1)
         {
-            // System.out.println("here");
             c++;
             p = t;
             t = t.next;
@@ -52,8 +51,6 @@ class Solution
         
         if(t.next!=null)
         {
-            // System.out.println(p.val);
-            // System.out.println(t.val);
             p.next = t.next;
         }
         else
