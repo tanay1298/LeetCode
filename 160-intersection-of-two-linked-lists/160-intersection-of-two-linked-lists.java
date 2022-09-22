@@ -18,10 +18,7 @@ public class Solution
         
         
         while(a!=null && b!=null)
-        {
-            
-            System.out.println(a.val + " " + b.val);
-            
+        {            
             if(a == b)
                 return a;
             
