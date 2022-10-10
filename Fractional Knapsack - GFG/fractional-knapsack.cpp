@@ -57,9 +57,6 @@ class Solution
                 int wt_left = W-w;
                 double frac = (1.0*wt_left)/cw;
                 p += frac * x.second.value;
-                
-                // p += x.first * wt_left;
-                
                 break;
             }
         }
