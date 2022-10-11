@@ -34,35 +34,26 @@ class GFG
 //User function Template for Java//User function Template for Java
 class Solution{
     
-    int getCurrentSum(ArrayList<Integer> arr, int x, int N)
+    public static void rec(ArrayList<Integer> arr, int i, int N, int cs, ArrayList<Integer> al)
     {
-        int cs = 0;
-        
-        for(int j=N-1;j>=0;j--)
+        if(i==N)
         {
-           int rem = x%2;
-           x=x/2;
-           
-           if(rem==1)
-            cs += arr.get(j);
+            al.add(cs);
+            return;
         }
         
-        return cs;
+        rec(arr, i+1, N, cs+arr.get(i), al);
+        rec(arr, i+1, N, cs, al);
     }
     
     ArrayList<Integer> subsetSums(ArrayList<Integer> arr, int N)
     {
-       int lim = (int)Math.pow(2,N);
-       ArrayList<Integer> al = new ArrayList<>();
-       
-       for(int i=0; i<lim; i++)
-       {
-          // convert x to binary
-          int ans = getCurrentSum(arr, i, N); 
-           
-           al.add(ans);
-       }
-       
-       return al;
+        ArrayList<Integer> al = new ArrayList<>();
+        
+        int i=0;
+        int cs = 0;
+        rec(arr, i, N, cs, al);
+        
+        return al;
     }
 }
