@@ -1,6 +1,12 @@
 class Solution 
 {
     
+//         1 2 2
+        
+//         1           _
+//         12      1_           _2       __
+//         122 12_  1_2 1__     _22 _2_  __2 ___
+    
     public void rec(int[] arr, int idx, int target, List<List<Integer>> res, List<Integer> l, boolean last_included)
     {
         if(idx == arr.length)
