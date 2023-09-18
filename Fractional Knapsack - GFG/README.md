@@ -1,4 +1,8 @@
 # Fractional Knapsack
+
+ref - https://www.youtube.com/watch?v=F_DDzYnxO14
+code - https://takeuforward.org/data-structure/fractional-knapsack-problem-greedy-approach/
+
 ## Medium
 <div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given <em>weights</em> and <em>values</em> of <strong>N</strong> items, we need to put these items in a knapsack of capacity <strong>W</strong> to get the <em>maximum</em> total value in the knapsack.<br>
 <strong>Note:</strong> Unlike 0/1 knapsack, you are allowed to break&nbsp;the item.&nbsp;</span></p>
