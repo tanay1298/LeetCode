@@ -33,7 +33,7 @@ for(int i=0;i<limit;i++)
 
         if(x==0)
         {
-            res = "_ " + set;
+            res = "_ " + res;
         }
         else if(x==1)
         {
