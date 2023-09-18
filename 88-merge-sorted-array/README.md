@@ -5,6 +5,9 @@
 <p>The final sorted array should not be returned by the function, but instead be <em>stored inside the array </em><code>nums1</code>. To accommodate this, <code>nums1</code> has a length of <code>m + n</code>, where the first <code>m</code> elements denote the elements that should be merged, and the last <code>n</code> elements are set to <code>0</code> and should be ignored. <code>nums2</code> has a length of <code>n</code>.</p>
 
 <p>&nbsp;</p>
+
+ref - https://www.youtube.com/watch?v=0H6038ldSyg
+
 <p><strong>Example 1:</strong></p>
 
 <pre><strong>Input:</strong> nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
